@@ -14,7 +14,7 @@ from fpdf import FPDF
 
 # Email sender settings
 sender_email = "samsonkolawumi@gmail.com"
-sender_password = "ncydckslsotpmpcn"
+sender_password = "YOUR_APP_PASSWORD_HERE"
 smtp_server = "smtp.gmail.com"
 smtp_port = 465 # Port 465 is explicitly used for secure SSL to bypass network blocks
 
