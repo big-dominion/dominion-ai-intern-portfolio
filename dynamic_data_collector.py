@@ -13,7 +13,7 @@ from email.mime.text import MIMEText
 from fpdf import FPDF
 
 # Email sender settings
-sender_email = "samsonkolawumi@gmail.com"
+sender_email = "YOUR_EMAIL_ADDRESS_HERE"
 sender_password = "YOUR_APP_PASSWORD_HERE"
 smtp_server = "smtp.gmail.com"
 smtp_port = 465 # Port 465 is explicitly used for secure SSL to bypass network blocks
