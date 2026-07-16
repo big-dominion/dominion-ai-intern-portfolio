@@ -1,13 +1,12 @@
-# 1. Student Information
+# Initialize baseline student profile variables
 student_name = "Samson"
 student_age = 18
 student_level = "500 Level"
-student_current_cgpa = 4.20 # Float
-did_student_name_passed_exam = True # Boolean
-student_score = 85 # Integer
+student_current_cgpa = 4.20  # Floating-point number for CGPA
+did_student_pass_exam = True  # Boolean tracking exam status
+student_score = 85  # Integer score representation
 
-
-# Student Grading System
+# Evaluate letter grade and pass/fail status based on score thresholds
 if student_score >= 90:
     grade = "A"
     status = "PASS"
@@ -20,54 +19,44 @@ elif student_score >= 70:
 elif student_score >= 60:
     grade = "D"
     status = "PASS"
-else: 
+else:
     grade = "F"
     status = "FAIL"
 
-# Present and Future Math Operation
+# Perform basic mathematical projections
 perfect_cgpa = 5.00
-cgpa_gap = perfect_cgpa - student_current_cgpa # Float Math
-future_age = student_age + 5 # Integer Math
+cgpa_gap = perfect_cgpa - student_current_cgpa  # Float subtraction
+future_age = student_age + 5  # Integer addition
 
-# Converting boolean to a meaningful text string response
-if did_student_name_passed_exam == True:
-    exam_status_text = "CLEARED"
-else:
-    exam_status_text = "NOT CLEARED"
+# Convert boolean status to a clean readable string
+exam_status_text = "CLEARED" if did_student_pass_exam else "NOT CLEARED"
 
-# Converting integers and float for a raw report sentence
+# Type casting: convert numbers to strings for text concatenation demonstrations
 age_as_string = str(student_age)
 cgpa_as_string = str(student_current_cgpa)
 score_as_string = str(student_score)
 
-# Initializing The Student Record List
+# Store core records inside a basic list data structure
 student_academic_record = [student_name, student_level, student_score]
 
+# Define a uniform border length for dynamic terminal display
+line_length = 70
 
-
-# Student Report Card
+# Terminal Report Card Display (using dynamic string multiplication and centering)
 print("")
-print("==============================================================================")
-print(f"                            ACADEMIC PROFILE: {student_name.upper()}                   ")
-print("==============================================================================")
-
-# Printing Basic details Using F-Strings
-print(f"• Student Age : {student_age} years old (Will be {future_age} in 5 years time.)")
+print("=" * line_length)
+print(f"ACADEMIC PROFILE FOR: {student_name.upper()}".center(line_length))
+print("=" * line_length)
+print(f"• Student Age : {student_age} years old (Will be {future_age} in 5 years.)")
 print(f"• Current Year: {student_level}")
 print(f"• Entrance Exam Status: {exam_status_text}")
-print("------------------------------------------------------------------------------")
-
-
-# Printing Academic Performance
-print(f"• Week 1 Score : {student_score}/100")
-print(f"• Week 1 Grade : {grade} ({status})")
+print("-" * line_length)
+print(f"• Evaluation Score : {student_score}/100")
+print(f"• Assigned Grade : {grade} ({status})")
 print(f"• Current CGPA : {student_current_cgpa} / {perfect_cgpa}")
-print(f"• Distance to Perfect CGPA: {cgpa_gap:.2f} points")
-print("------------------------------------------------------------------------------")
-'''
-# Printing Type Conversions and Lists to prove execution
-print("--- UNDER THE HOOD DATA CHECKS ---")
-print(f"Raw Concatenation (Using Type Conversion Strings): Age " + age_as_string + ", CGPA " + cgpa_as_string + ", Score " + score_as_string)
-print(f"Compiled List Record: {student_academic_record}")
-print("==============================================================================")
-'''
+print(f"• Distance to 5.0 CGPA: {cgpa_gap:.2f} points")
+print("-" * line_length)
+print("--- UNDER THE HOOD DATA TYPE CHECKS ---")
+print("Type Casting Concat -> Age: " + age_as_string + ", CGPA: " + cgpa_as_string + ", Score: " + score_as_string)
+print(f"Compiled List Record Structure: {student_academic_record}")
+print("=" * line_length)
